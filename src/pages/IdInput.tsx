@@ -45,30 +45,25 @@ const IdInput = () => {
 
       <div className="relative z-10 w-full max-w-md">
         <div className="text-center mb-8">
-          <div className="flex items-center justify-center mb-6">
-            <div className="relative">
-              <Beaker className="w-20 h-20 text-pharma-primary" />
-            </div>
-          </div>
-          <h1 className="text-5xl font-bold bg-gradient-to-r from-pharma-primary via-pharma-secondary to-pharma-accent bg-clip-text text-transparent title-glow">
+          <h1 className="text-5xl font-bold bg-gradient-to-r from-[#FFFFFF] via-[#C4B8A9] to-[#EFE9DD] bg-clip-text text-transparent">
              AMONG THE REMNANTS ⚗️
           </h1>
-          <p className="text-pharma-primary/80 mt-3 text-lg font-medium">
-            Cured or Cursed
+          <p className="text-white mt-3 text-lg font-medium">
+            Save the World, Frontliners!
           </p>
         </div>
 
         <Card className="bg-pharma-surface-elevated/60 border-pharma-primary/30 shadow-[var(--shadow-card)]">
           <CardHeader className="text-center">
-            <CardTitle className="text-2xl text-pharma-primary">Research Terminal</CardTitle>
-            <CardDescription className="text-pharma-primary/60">
+            <CardTitle className="text-3xl text-white">RESEARCH TERMINAL</CardTitle>
+            <CardDescription className="text-red-100 italic">
               Enter security ID to access data
             </CardDescription>
           </CardHeader>
           <CardContent>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-3">
-                <label htmlFor="research-id" className="text-sm font-medium text-pharma-primary/90 tracking-wide">
+                <label htmlFor="research-id" className="text-sm font-medium text-white tracking-wide">
                   🔐 SECURITY ID
                 </label>
                 <Input
@@ -77,7 +72,7 @@ const IdInput = () => {
                   value={id}
                   onChange={(e) => setId(e.target.value)}
                   placeholder="●●●●●●●●"
-                  className="bg-pharma-accent/70 border-pharma-primary/40 focus:border-pharma-secondary focus:ring-pharma-primary/30 text-center font-mono text-xl tracking-[0.3em] text-white placeholder:text-pharma-primary/30 h-14"
+                  className="bg-pharma-accent/70 border-pharma-primary/40 focus:border-pharma-secondary focus:ring-pharma-primary/30 text-center font-mono text-xl tracking-[0.3em] placeholder:text-pharma-primary/30 h-14"
                   disabled={isLoading}
                 />
                 <div className="h-[2px] bg-gradient-to-r from-transparent via-pharma-primary/50 to-transparent" />
@@ -86,7 +81,7 @@ const IdInput = () => {
                 type="submit"
                 variant="lab"
                 size="lg"
-                className="w-full h-14 text-lg font-bold tracking-wide"
+                className="w-full h-14 text-lg text-red-100 font-bold tracking-wide"
                 disabled={isLoading}
               >
                 {isLoading ? (
@@ -106,10 +101,10 @@ const IdInput = () => {
         </Card>
 
         <div className="text-center mt-6 space-y-2">
-          <div className="text-xs text-pharma-warning/80 font-mono">
+          <div className="text-xs text-red-500 font-mono">
             ⚠️ LABORATORY - RESTRICTED ACCESS ⚠️
           </div>
-          <div className="text-xs text-muted-foreground/60">
+          <div className="text-xs text-red-200">
             Will this pandemic come to its end?
           </div>
         </div>
